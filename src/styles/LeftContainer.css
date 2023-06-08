@@ -1,0 +1,30 @@
+.left-container {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 80px;
+}
+
+.header {
+    font-family: 'GeneralSans-Semibold';
+    font-size: 6.5vh;
+    color: #82C4FF;
+    width: 100%;
+}
+  
+.odometer-wrapper {
+    font-family: 'GeneralSans-Semibold';
+    width: 80%;
+    font-size: 10vw;
+    color: #F6F3F1;
+}
+
+.odometer-label {
+    font-family: 'GeneralSans-Semibold';
+    font-size: 5vh;
+    text-align: right;
+    padding-left: 5vw;
+}
+  
