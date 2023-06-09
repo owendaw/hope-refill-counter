@@ -13,7 +13,7 @@ const LeftContainer = ({ bottles, emissions }) => {
       <div className="header">
         <span>At AW22, we have saved:</span>
       </div>
-      <OdometerWrapper value={bottles} label="plastic bottles" />
+      <OdometerWrapper value={bottles} label="plastic bottles" format='(,ddd)' />
       <OdometerWrapper value={emissions} label="g - CO₂" format='(,ddd)' />
     </div>
   );
