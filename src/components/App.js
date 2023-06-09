@@ -10,20 +10,22 @@ function App() {
   const [bottles, setBottles] = useState(0);
   const [emissions, setEmissions] = useState(0);
 
-  useEffect(() => {
-    const fetchFluidOuncesInterval = setInterval(async () => {
-      try {
-        const total_flow = await fetchFluidOunces();
-        const bottles = total_flow / 16.9;
-        const emissions = bottles * 83;
-        setBottles(Math.round(bottles));
-        setEmissions(Math.round(emissions));
-      } catch (error) {
-        console.error(error);
-      }
-    // }, 5000);
-    }, 60000);
+  const fetchAndUpdate = async () => {
+    try {
+      const total_flow = await fetchFluidOunces();
+      const bottles = total_flow / 16.9;
+      const emissions = bottles * 83;
+      setBottles(Math.round(bottles));
+      setEmissions(Math.round(emissions));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
+  useEffect(() => {
+    fetchAndUpdate(); // fetch data immediately after the page loads
+
+    const fetchFluidOuncesInterval = setInterval(fetchAndUpdate, 60000);
 
     return () => {
       clearInterval(fetchFluidOuncesInterval);
