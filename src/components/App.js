@@ -14,10 +14,10 @@ function App() {
     const fetchFluidOuncesInterval = setInterval(async () => {
       try {
         const total_flow = await fetchFluidOunces();
-        const bottles = Math.round(total_flow / 16.9);
-        const emissions = total_flow;
-        setBottles(bottles);
-        setEmissions(emissions);
+        const bottles = total_flow / 16.9;
+        const emissions = bottles * 83;
+        setBottles(Math.round(bottles));
+        setEmissions(Math.round(emissions));
       } catch (error) {
         console.error(error);
       }
