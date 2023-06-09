@@ -21,7 +21,9 @@ function App() {
       } catch (error) {
         console.error(error);
       }
-    }, 5000);
+    // }, 5000);
+    }, 60000);
+
 
     return () => {
       clearInterval(fetchFluidOuncesInterval);
