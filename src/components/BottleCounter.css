@@ -1,0 +1,44 @@
+.counter-container {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .counter-text {
+    font-size: 2em; /* Adjust font size here */
+  }
+  
+  .counter-number {
+    font-size: 3em; /* Adjust number font size here */
+    margin-right: 15px;
+  }
+
+  .odometer {
+    font-size: 3em;
+    margin-right: 15px;
+  }
+  
+  @media (orientation: portrait) {
+    .counter-container {
+      top: 60%;
+      left: 50%;
+    }
+  
+    /* You can also adjust the font size based on orientation */
+    .counter-text {
+      font-size: 2em;
+    }
+  
+    .counter-number {
+      font-size: 3em;
+      margin-right: 10px;
+    }
+
+    .odometer {
+      font-size: 3em;
+      margin-right: 10px;
+    }
+  }
+  

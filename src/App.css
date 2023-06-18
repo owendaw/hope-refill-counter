@@ -1,0 +1,16 @@
+.App {
+    position: relative;
+    height: 100vh;
+    background-image: url('./assets/horizontalBackground.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media (orientation: portrait) {
+    .App {
+      background-image: url('./assets/verticalBackground.png');
+    }
+  }
+  
+  /* Additional styles for your components here */
+  
