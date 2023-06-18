@@ -6,6 +6,7 @@ import './BottleCounter.css';
 const BottleCounter = () => {
   const [bottleCount, setBottleCount] = useState(0);
   const [prevCount, setPrevCount] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchBottleCount = async () => {
@@ -18,6 +19,10 @@ const BottleCounter = () => {
     fetchBottleCount();
 
     const intervalId = setInterval(fetchBottleCount, 60000); // every 1 minute
+
+    window.onload = () => {
+      setIsLoaded(true);
+    };
 
     // cleanup function to clear the interval when component unmounts
     return () => clearInterval(intervalId);
