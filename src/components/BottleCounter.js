@@ -34,10 +34,10 @@ const BottleCounter = () => {
         <Odometer value={bottleCount} format="(,ddd)" duration={500} />
         plastic bottles
       </h1>
-      <h2 className="counter-text">
+      {/* <h2 className="counter-text">
         <Odometer value={bottleCount * 83} format="(,ddd)" duration={2000} />
         g - CO2
-      </h2>
+      </h2> */}
     </div>
   );
 };
