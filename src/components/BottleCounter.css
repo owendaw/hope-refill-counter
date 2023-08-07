@@ -1,61 +1,67 @@
 .counter-container {
-    position: absolute;
-    top: 70%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
   
-  .counter-text {
-    font-size: 2.5em; /* Adjust font size here */
-  }
+.counter-text {
+  font-size: 2.5vw; /* Adjust font size here */
+}
   
-  .counter-number {
-    font-size: 3em; /* Adjust number font size here */
-    margin-right: 15px;
+.counter-number {
+  font-size: 3vw; /* Adjust number font size here */
+  margin-right: 15px;
+}
+  
+.odometer {
+  font-size: 8vw;
+  margin-right: 1.5rem;
+}
+  
+@media (max-width: 767px) {
+  .counter-container {
+    top: 30%;
+    left: 50%;
   }
 
   .odometer {
-    font-size: 3.5em;
+    font-size: 5vw; /* Adjust for smaller screens */
     margin-right: 1.5rem;
   }
 
-  @media (max-width: 767px) {
-    .counter-container {
-      top: 30%;
-      left: 50%;
-    }
-  
-    .odometer {
-      font-size: .5em;
-      margin-right: 1.5rem;
-    }
-  
-    .counter-text {
-      font-size: 0.8em;
-      margin-left: 5px;
-    }
+  .counter-text {
+    font-size: 3vw; /* Adjust for smaller screens */
+    margin-left: 5px;
   }
-  
-  @media (orientation: portrait) {
-    .counter-container {
-      top: 60%;
-      left: 50%;
-    }
-  
-    /* You can also adjust the font size based on orientation */
-    .counter-text {
-      font-size: 2.5em;
-    }
-  
-    .counter-number {
-      font-size: 3.5em;
-      margin-right: 10px;
-    }
+}
 
-    .odometer {
-      font-size: 3em;
-      margin-right: 1.5rem;
-    }
+@media (orientation: portrait) {
+  .counter-container {
+    top: 60%;
+    left: 50%;
   }
+
+  /* You can also adjust the font size based on orientation */
+  .counter-text {
+    font-size: 5vw;
+    white-space: nowrap;
+    margin-bottom: 20vw;
+  }
+
+  .counter-number {
+    font-size: 3.5vw;
+    margin-right: 10px;
+  }
+
+  .odometer {
+    white-space: nowrap; /* Prevents the text from breaking into a new line */
+    overflow: hidden;   /* Hides the text that overflows */
+    text-overflow: ellipsis; /* Adds an ellipsis when the text overflows */
+    font-size: 15vw; /* Adjusts the font size based on viewport width */
+    max-width: 95%; /* You can set a maximum width to prevent overflow */
+    display: inline-block; /* Makes the max-width property effective */
+  }
+}
   
